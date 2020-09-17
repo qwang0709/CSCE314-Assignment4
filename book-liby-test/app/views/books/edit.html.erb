@@ -1,0 +1,36 @@
+<%= link_to("<< Back to List", books_path, :class => 'back-link') %>
+
+<div class="books edit">
+  <h2>Update Book</h2>
+
+  <%= form_for(@bks) do |f| %> <!-- rails knows to do path here automatically -->
+
+    <table summary="Book edit">
+      <tr>
+        <th>Title</th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td><%= f.text_field(:author) %></td>
+      </tr>
+      <tr>
+        <th>Genre</th>
+        <td><%= f.text_field(:genre) %></td>
+      </tr>
+      <tr>
+        <th>Price</th>
+        <td><%= f.text_field(:price) %></td>
+      </tr>
+      <tr>
+        <th>Published Date</th>
+        <td><%= f.text_field(:published_date) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Book") %>
+    </div>
+
+  <% end %>
+</div>
