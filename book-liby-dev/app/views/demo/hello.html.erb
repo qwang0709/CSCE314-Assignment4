@@ -1,0 +1,20 @@
+<h1>HELLO everyone!</h1>
+
+<%= 1+1 %>
+
+
+<% @array.each do |n| %>
+<p><%= n %></p>
+<%end%>
+
+<%= @array %>
+<br \>
+<%= link_to("Click here to go back to index page",{:controller => 'demo', :action => 'index'}) %>
+<br \>
+ID: <%=@id%>
+<br \>
+Page: <%=@page%>
+<br \>
+Next page: <%=@page.to_i + 1%>
+<br \>
+Phone number: <%=@phone%>
